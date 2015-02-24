@@ -3,7 +3,7 @@ This repository is a collection of **Homebrew** formulas and directions to insta
 
 Currently, there are formulas for:
   - Python
-  - GNU Radio 3.75
+  - GNU Radio 3.7
   - rtlsdr
   - gr-osmosdr
   - GQRX 2.3.2
@@ -20,12 +20,12 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ```shell
 brew install python
-pip install matplotlib numpy lxml cheetah # dependencies of gnuradio
+pip install matplotlib numpy lxml cheetah     # dependencies of gnuradio
 ```
 
 ### Install GNU Radio
 
-Installing GNURadio usually takes about 25mins.  The formula will make sure all dependencies are met.
+Installing GNU Radio usually takes about 25 mins.  The formula will make sure all dependencies are met.
 
 ```shell
 brew tap nejohnson2/homebrew-sdr
@@ -37,6 +37,7 @@ Restart the computer.
 
 ```shell
 brew install rtlsdr gr-osmosdr gqrx --HEAD
+brew linkapps gqrx    # symlink the .app file to /Applications 
 ```
 
 ### Thanks
