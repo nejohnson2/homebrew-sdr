@@ -20,7 +20,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ```shell
 brew install python
-
 pip install matplotlib numpy lxml cheetah # dependencies of gnuradio
 ```
 
