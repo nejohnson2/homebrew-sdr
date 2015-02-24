@@ -35,7 +35,7 @@ Restart the computer.
 
 ### Install GQRX
 
-I'm using the RTLSDR dongle.  For other SDR devices, install the desired driver before installing ```gr-osmosdr``` and ```gqrx```. 
+I'm using the RTLSDR dongle.  For other SDR devices, install the desired driver before installing ```gr-osmosdr``` and ```gqrx```.  Check [this page](http://sdr.osmocom.org/trac/wiki/GrOsmoSDR) for more information. 
 
 ```shell
 brew install rtlsdr gr-osmosdr gqrx --HEAD
