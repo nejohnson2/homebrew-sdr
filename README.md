@@ -41,6 +41,6 @@ brew install rtlsdr gr-osmosdr gqrx --HEAD
 
 ### Thanks
 
-Many thanks to [titanous](https://github.com/titanous/homebrew-gnuradio), [metacollin](https://github.com/metacollin/homebrew-gnuradio) and [chleggett](https://github.com/chleggett/homebrew-gqrx) from whom I compiled this code.
+Many thanks to [titanous](https://github.com/titanous/homebrew-gnuradio), [metacollin](https://github.com/metacollin/homebrew-gnuradio), [dholm](https://github.com/dholm/homebrew-sdr) and [chleggett](https://github.com/chleggett/homebrew-gqrx) from whom I compiled this code.
 
 More to come...
