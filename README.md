@@ -1,5 +1,5 @@
 # homebrew-sdr
-This repository is a collection of **Homebrew** formulas to install various SDR software components.  After much pain and suffering always trying to get thing installed properly I started using **Homebrew** which has really simplified the process.  Certainly each install will be different, but I hope this provides a good foundation to get up and running with your SDR.
+This repository is a collection of **Homebrew** formulas and directions to install various SDR software components.  After much pain and suffering always trying to get thing installed properly I started using **Homebrew** which has really simplified the process.  Certainly each install will be different, but I hope this provides a good foundation to get up and running with your SDR.
 
 Currently, there are formulas for:
   - Python
