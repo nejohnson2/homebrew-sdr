@@ -55,7 +55,7 @@ After installing the rtlsdr library, there are several python scripts that you c
 rtl_power -f 90M:120M:8k -g 50 -i 2 -e 1h data.csv
 ```
 
-The ```-f``` command specifies a range of frequencies to scan.  ```-i``` sets the speed in seconds.  ```-e``` sets the run time(though you can always use ```ctl-c``` to exit.  And then give a file to save data to.
+The ```-f``` command specifies a range of frequencies to scan(lower:upper:bin size).  ```-i``` sets the collection time in seconds/minutes/hour(s/m/h) format.  ```-e``` sets the run time(though you can always use ```ctl-c``` to exit).  And then give a file to save data to.
 
 After recording data, use the ```heatmap.py``` file to generate an high resolution image of the spectrum.  It looks something like this:
 
