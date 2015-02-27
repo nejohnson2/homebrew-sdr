@@ -21,6 +21,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ```shell
 brew install python
 pip install matplotlib numpy lxml cheetah     # dependencies of gnuradio
+pip install Pillow    # required for running the heatmap.py script
 ```
 
 ### Install GNU Radio
