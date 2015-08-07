@@ -15,4 +15,10 @@ class GrOsmosdr < Formula
       system 'make install'
     end
   end
+
+  def python_path
+    python = Formula.factory('python')
+    kegs = python.rack.children.reject { |p| p.basename.to_s == '.DS_Store' }
+    kegs.find { |p| Keg.new(p).linked? } || kegs.last
+  end
 end
