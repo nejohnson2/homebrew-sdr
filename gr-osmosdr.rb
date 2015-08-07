@@ -10,7 +10,7 @@ class GrOsmosdr < Formula
 
   def install
     mkdir 'build' do
-      system 'cmake', '..'
+      system 'cmake', '..', *std_cmake_args << "-DPYTHON_LIBRARY=#{python_path}/Frameworks/Python.framework/"
       system 'make'
       system 'make install'
     end
