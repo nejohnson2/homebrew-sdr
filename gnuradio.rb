@@ -4,7 +4,7 @@ class Gnuradio < Formula
   homepage "http://gnuradio.org"
   head "https://github.com/gnuradio/gnuradio.git"
   url "http://gnuradio.org/releases/gnuradio/gnuradio-3.7.5.1.tar.gz"
-  sha1 "ccb66c462aff098bcdace60e52aad64439177b48"
+  sha256 "85cc828a96735bdafcf29eb6291ca91bac846579bcef7308536e0c875d6c81d7"
 
   option "without-qt", "Build with QT widgets in addition to wxWidgets"
   option "without-docs", "Build gnuradio documentation"
@@ -12,33 +12,33 @@ class Gnuradio < Formula
 
   resource "docutils" do
     url "https://pypi.python.org/packages/source/d/docutils/docutils-0.12.tar.gz"
-    sha1 "002450621b33c5690060345b0aac25bc2426d675"
+    sha256 "85cc828a96735bdafcf29eb6291ca91bac846579bcef7308536e0c875d6c81d7"
   end
 
   resource "Cheetah" do
     url "https://pypi.python.org/packages/source/C/Cheetah/Cheetah-2.4.4.tar.gz"
-    sha1 "c218f5d8bc97b39497680f6be9b7bd093f696e89"
+    sha256 "85cc828a96735bdafcf29eb6291ca91bac846579bcef7308536e0c875d6c81d7"
   end
 
   resource "lxml" do
     url "https://pypi.python.org/packages/source/l/lxml/lxml-3.4.1.tar.gz"
-    sha1 "c09f4e8e71fc9d49fb43bf33821da816ce887396"
+    sha256 "85cc828a96735bdafcf29eb6291ca91bac846579bcef7308536e0c875d6c81d7"
   end
 
   resource "numpy" do
     url "http://downloads.sourceforge.net/project/numpy/NumPy/1.9.1/numpy-1.9.1.tar.gz"
-    sha1 "a96ddd221b34c08f08ae700a51969ddeb17d40ea"
+    sha256 "85cc828a96735bdafcf29eb6291ca91bac846579bcef7308536e0c875d6c81d7"
   end
 
   resource "scipy" do
     url "http://downloads.sourceforge.net/project/scipy/scipy/0.14.0/scipy-0.14.0.tar.gz"
-    sha1 "faf16ddf307eb45ead62a92ffadc5288a710feb8"
+    sha256 "85cc828a96735bdafcf29eb6291ca91bac846579bcef7308536e0c875d6c81d7"
   end
 
   if build.without? "brewed-python"
     resource "matplotlib" do
       url "https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.2/matplotlib-1.4.2.tar.gz"
-      sha1 "242c57ddae808b1869cad4b08bb0973c513e12f8"
+      sha256 "85cc828a96735bdafcf29eb6291ca91bac846579bcef7308536e0c875d6c81d7"
     end
   end
 
