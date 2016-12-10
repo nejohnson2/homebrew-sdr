@@ -10,7 +10,7 @@ class Rtlsdr < Formula
   depends_on 'cmake' => :build
   depends_on 'libusb'
 
-  if MacOS::Xcode.version >= 4.3
+  if Float(MacOS::Xcode.version) >= 4.3
     depends_on 'autoconf'
   end
 
