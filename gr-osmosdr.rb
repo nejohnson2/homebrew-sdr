@@ -17,7 +17,7 @@ class GrOsmosdr < Formula
   end
 
   def python_path
-    python = Formula.factory('python')
+    python = Formulary.factory('python')
     kegs = python.rack.children.reject { |p| p.basename.to_s == '.DS_Store' }
     kegs.find { |p| Keg.new(p).linked? } || kegs.last
   end
