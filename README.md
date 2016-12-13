@@ -68,8 +68,9 @@ Installing GNU Radio usually takes about 25 mins.  The formula will make sure al
 
 ```shell
 brew tap nejohnson2/homebrew-sdr
-brew install cmake
+brew install cmake   # install cmake-3.3.2 since gnuradio doesnt like newer versions
 
+# version 3.7.9
 brew install gnuradio
 ```
 
