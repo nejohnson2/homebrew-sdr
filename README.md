@@ -7,8 +7,17 @@ Currently, there are formulas for:
   - rtlsdr
   - gr-osmosdr
   - GQRX 2.3.2
+  - gr-gsm
 
-This installation works for MacOSX Yosemite 10.10.2 and assumes you've installed [Xcode 6.1](https://developer.apple.com/xcode/downloads/), Commandline Tools and [XQuartz](http://xquartz.macosforge.org/landing/)
+This installation works for macOS Sierra 10.12.1.
+
+### Install XCode
+You'll need to install [Xcode](https://developer.apple.com/xcode/downloads/) and the ```Commandline Tools``` first.  This installation was successful with Xcode 8.
+
+```shell
+xcode-select --install
+softwareupdate --install --all 
+```
 
 ### Install Homebrew
 
@@ -20,8 +29,37 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ```shell
 brew install python
-pip install matplotlib numpy lxml cheetah     # dependencies of gnuradio
+brew cask install xquartz
+
+brew tap homebrew/python
+brew install matplotlib
+brew install numpy
+brew install scipy
+
+# Dependencies
+pip install Cheetah
+pip install lxml
+pip install sphinx
 pip install Pillow    # required for running the heatmap.py script
+```
+
+### Install Dependencies
+
+```
+brew install gsl
+brew install pygtk
+brew install wxpython
+brew install boost
+brew install cppunit
+brew install fftw
+brew install zeromq
+brew install doxygen
+brew install uhd
+brew install portaudio
+brew install sdl
+brew install jack
+brew install swig
+brew install sip
 ```
 
 ### Install GNU Radio
@@ -30,17 +68,27 @@ Installing GNU Radio usually takes about 25 mins.  The formula will make sure al
 
 ```shell
 brew tap nejohnson2/homebrew-sdr
-brew install gnuradio --with-brewed-python
-```
-Restart the computer.
+brew install cmake
 
-### Install GQRX
+brew install gnuradio
+```
+
+### Install SDR Tools
 
 I'm using the RTLSDR dongle.  For other SDR devices, install the desired driver before installing ```gr-osmosdr``` and ```gqrx```.  Check [this page](http://sdr.osmocom.org/trac/wiki/GrOsmoSDR) for more information. 
 
 ```shell
-brew install rtlsdr gr-osmosdr gqrx --HEAD
-brew linkapps gqrx    # symlink the .app file to /Applications 
+brew install librtlsdr 
+brew install bladerf --HEAD
+brew install gr-osmosdr gr-baz --HEAD
+brew install gqrx
+```
+
+### Install gr-gsm
+
+```
+brew install libosmocore --HEAD
+brew install gr-gsm --HEAD
 ```
 
 ### SDR Testing
