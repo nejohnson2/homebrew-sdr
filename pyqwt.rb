@@ -8,7 +8,7 @@ class Pyqwt < Formula
   depends_on "qt"
   depends_on "qwt"
   depends_on "sip"
-  depends_on "pyqt"
+  depends_on "nejohnson2/sdr/pyqt"
 
   # Patch to build system to allow for specific installation directories.
   patch :p0, :DATA
