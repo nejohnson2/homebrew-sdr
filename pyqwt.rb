@@ -33,8 +33,8 @@ class Pyqwt < Formula
 end
 
 __END__
---- configure/configure.py	2011-10-24 19:14:41.000000000 -0500
-+++ configure/configure.py	2011-10-24 19:15:03.000000000 -0500
+--- configure/configure.py  2011-10-24 19:14:41.000000000 -0500
++++ configure/configure.py  2011-10-24 19:15:03.000000000 -0500
 @@ -846,14 +846,14 @@
      pattern = os.path.join(os.pardir, 'sip', options.qwt, 'common', '*.sip')
      sip_files += [os.path.join(os.pardir, f) for f in glob.glob(pattern)]

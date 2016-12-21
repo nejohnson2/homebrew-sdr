@@ -11,7 +11,7 @@ class Pyqt < Formula
     odie "pyqt: --with-python3 must be specified when using --without-python"
   end
 
-  depends_on "qt"
+  depends_on "cartr/qt4/qt"
 
   if build.with? "python3"
     depends_on "sip" => "with-python3"
@@ -53,7 +53,7 @@ class Pyqt < Formula
         cp_r(Dir.glob("*"), dir)
         cd dir do
           system python, "configure.py", *args
-          inreplace "pyqtconfig.py", Formula["qt"].prefix, Formula["qt"].opt_prefix
+          inreplace "pyqtconfig.py", Formula["cartr/qt4/qt"].prefix, Formula["cartr/qt4/qt"].opt_prefix
           (lib/"python#{version}/site-packages/PyQt4").install "pyqtconfig.py"
         end
       ensure
@@ -85,5 +85,10 @@ class Pyqt < Formula
     Language::Python.each_python(build) do |python, _version|
       system python, "test.py"
     end
+  end
+  
+  bottle do
+    root_url "https://dl.bintray.com/cartr/bottle-qt4"
+    sha256 "9a24c78224b0b2c9d1ced22804dd3c01b82f9a35ce0a228aaa9db64c34376ef7" => :sierra
   end
 end
