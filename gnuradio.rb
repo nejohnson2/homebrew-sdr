@@ -12,16 +12,25 @@ class Gnuradio < Formula
   depends_on 'pygtk'
   depends_on 'swig'
   depends_on 'cppunit'
+  depends_on 'pyqt'
+  depends_on 'pyqwt'
+
+  def options
+    [
+      ['--with-qt', 'Build gr-qtgui.'],
+    ]
+  end
 
   def install
     ENV.prepend_create_path 'PYTHONPATH', libexec+'lib/python2.7/site-packages'
     install_args = [ "setup.py", "install", "--prefix=#{libexec}" ]
 
     mkdir 'build' do
+      args = ["-DCMAKE_PREFIX_PATH=#{prefix}", "-DQWT_INCLUDE_DIRS=#{HOMEBREW_PREFIX}/lib/qwt.framework/Headers", "-DQWT_LIBRARIES=#{HOMEBREW_PREFIX}/lib/qwt.framework/qwt", ] + std_cmake_args
+      args << '-DENABLE_GR_QTGUI=OFF' unless ARGV.include?('--with-qt')
+
       python_prefix = `python-config --prefix`.strip
 
-      args = ["-DCMAKE_PREFIX_PATH=#{prefix}"] + std_cmake_args
-      args << '-DENABLE_GR_QTGUI=OFF'
       args << '-DENABLE_DOXYGEN=OFF'
       args << "-DPYTHON_LIBRARY='#{python_prefix}/Python'"
       args << "-DPYTHON_INCLUDE_DIR='#{python_prefix}/Headers'"
