@@ -15,7 +15,7 @@ class Qwt < Formula
   option "with-qwtmathml", "Build the qwtmathml library"
   option "without-plugin", "Skip building the Qt Designer plugin"
 
-  depends_on "qt"
+  #depends_on "qt"
 
   # Update designer plugin linking back to qwt framework/lib after install
   # See: https://sourceforge.net/p/qwt/patches/45/
