@@ -6,7 +6,6 @@ class Qwt < Formula
 
   bottle do
     cellar :any
-    revision 1
     sha256 "e8c3fcd136e3da5ad5a9c9a08621585c30d610e7c9cebc1b39fb0d2da4582876" => :el_capitan
     sha256 "85b9c0169f8dc07eab6ce43d41882f55e96e6e990ef15c998e4d5b348828e89a" => :yosemite
     sha256 "0399fac9166e7a7a62cd07552253054b79c80ed8c182ad8d249b61d678ef3a95" => :mavericks

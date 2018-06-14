@@ -5,7 +5,7 @@ class Pyqt < Formula
   sha256 "f178ba12a814191df8e9f87fb95c11084a0addc827604f1a18a82944225ed918"
 
   option "without-python", "Build without python 2 support"
-  depends_on :python3 => :optional
+  depends_on "python" => :optional
 
   if build.without?("python3") && build.without?("python")
     odie "pyqt: --with-python3 must be specified when using --without-python"
@@ -86,7 +86,7 @@ class Pyqt < Formula
       system python, "test.py"
     end
   end
-  
+
   bottle do
     root_url "https://dl.bintray.com/cartr/bottle-qt4"
     sha256 "9a24c78224b0b2c9d1ced22804dd3c01b82f9a35ce0a228aaa9db64c34376ef7" => :sierra
