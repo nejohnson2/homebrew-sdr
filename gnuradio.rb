@@ -6,7 +6,7 @@ class Gnuradio < Formula
   head 'git://gnuradio.org/gnuradio/gnuradio.git'
 
   depends_on 'cmake' => :build
-  depends_on 'scipy' => :python
+  depends_on 'scipy' => 'python'
   depends_on 'boost'
   depends_on 'fftw'
   depends_on 'pygtk'
@@ -35,7 +35,7 @@ class Gnuradio < Formula
       args << "-DPYTHON_LIBRARY='#{python_prefix}/Python'"
       args << "-DPYTHON_INCLUDE_DIR='#{python_prefix}/Headers'"
       args << "-DPYTHON_PACKAGES_PATH='#{lib}/#{which_python}/site-packages'"
-      
+
       system 'cmake', '..', *args
       system 'make'
       system 'make install'
